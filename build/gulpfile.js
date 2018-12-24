@@ -22,7 +22,7 @@ const Css = {
   dest: '../css'
 };
 
-const needMore = true
+const needMore = false
 const More = [
   '../src/scss/app-reset.scss',
   '../src/scss/app-reboot.scss'
