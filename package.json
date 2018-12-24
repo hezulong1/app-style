@@ -1,5 +1,5 @@
 {
-  "name": "@gwzh/app-style",
+  "name": "@guanwei/app-style",
   "version": "1.0.0",
   "description": "Reset styles for application",
   "author": "gwzh",
@@ -42,5 +42,6 @@
   "directories": {
     "doc": "doc"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "license": "MIT"
 }
