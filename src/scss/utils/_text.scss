@@ -1,0 +1,43 @@
+@each $prop in (left, right, center, justify) {
+  @include b(text-#{$prop}) {
+    text-align: $prop !important;
+  }
+}
+
+@include b(text-nowrap) {
+  white-space: nowrap !important;
+}
+
+@each $prop in (lowercase, uppercase, capitalize) {
+  @include b(text-#{$prop}) {
+    text-transform: $prop !important;
+  }
+}
+
+@include b(font-weight-light) {
+  font-weight: $font-weight-light !important;
+}
+
+@include b(font-weight-normal) {
+  font-weight: $font-weight-base !important;
+}
+
+@include b(font-weight-bold) {
+  font-weight: $font-weight-bold !important;
+}
+
+@include b(font-italic) {
+  font-style: italic !important;
+}
+
+@include b(text-elip) {
+  @include ellipsis;
+}
+
+@include b(text-hide) {
+  @include text-hide;
+}
+
+@each $color, $value in $theme-colors {
+  @include text-variant(".#{$namespace}-text-#{$color}", $value);
+}

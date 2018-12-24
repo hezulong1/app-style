@@ -1,0 +1,7 @@
+@each $color, $value in $theme-colors {
+  @include bg-variant("." + concatNamespace("bg-#{$color}"), $value)
+}
+
+@include b(bg-light) {
+  background-color: $fill-light !important;
+}

@@ -1,0 +1,46 @@
+{
+  "name": "@gwzh/app-style",
+  "version": "1.0.0",
+  "description": "Reset styles for application",
+  "author": "gwzh",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "front-end",
+    "app-style",
+    "gwzh",
+    "guanwei"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development gulp css_compile --gulpfile build/gulpfile.js",
+    "pro": "cross-env NODE_ENV=production gulp css_compile --gulpfile build/gulpfile.js",
+    "watch": "cross-env NODE_ENV=development gulp css_watch --gulpfile build/gulpfile.js"
+  },
+  "style": "css/app.css",
+  "sass": "src/scss/app.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hezulong1/gwzh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hezulong1/gwzh/issues"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-header": "^2.0.5",
+    "gulp-if": "^2.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1"
+  },
+  "homepage": "https://github.com/hezulong1/gwzh#readme",
+  "main": "css/app.min.css",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {}
+}

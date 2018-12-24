@@ -1,0 +1,20 @@
+@each $screen in (xs, sm, md, lg) {
+  @include respond($screen) {
+    @include b(#{$screen}-hide) {
+      display: none !important;
+    }
+    @each $d in ( block, inline, inline-block) {
+      @include b(#{$screen}-#{$d}) {
+        display: $d !important;
+      }
+    }
+  }
+}
+
+@include b(hide) {
+  display: none !important;
+}
+
+@include b(show) {
+  display: block !important;
+}

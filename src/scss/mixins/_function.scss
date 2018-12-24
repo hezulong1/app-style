@@ -1,0 +1,15 @@
+@function concatNamespace($name: false) {
+  $return: "";
+
+  @if $name {
+    @if $namespace=="" {
+      $return: $name;
+    }
+
+    @else {
+      $return: #{$namespace + '-' + $name};
+    }
+  }
+
+  @return $return;
+}

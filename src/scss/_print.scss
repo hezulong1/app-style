@@ -1,0 +1,70 @@
+/* Print */
+// @reference Bootstarp 4.0.0
+@media print {
+  *,
+  *:before,
+  *:after {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  a {
+    &:not(.btn) {
+      text-decoration: underline;
+    }
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: $border-base;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  @page {
+    size: $print-page-size;
+  }
+
+  body {
+    min-width: $print-body-min-width !important;
+  }
+
+  table {
+    th,
+    td {
+      background-color: #fff !important;
+    }
+  }
+}

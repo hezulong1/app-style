@@ -1,0 +1,272 @@
+/*!
+ * App Development v1.0.0
+ * (c) 2018-2018 gwzh 
+ * build in: 2018-12-24 13:35:27
+ */
+
+/* Color */
+/* Size */
+/* Space */
+/* ZIndex */
+/* Font */
+/* Fill */
+/* Border */
+/* Link */
+/* Grid */
+/* Disable */
+/* Popper */
+/* Code */
+/* Print */
+/* Animation */
+/* Root */
+:root {
+  --blue: #0077e6;
+  --red: #f36c60;
+  --primary: #0077e6;
+  --primary-light-1: #1a85e9;
+  --primary-light-2: #3392eb;
+  --primary-light-3: #4da0ee;
+  --primary-light-4: #66adf0;
+  --primary-light-5: #80bbf3;
+  --primary-light-6: #99c9f5;
+  --primary-light-7: #b3d6f8;
+  --primary-light-8: #cce4fa;
+  --primary-light-9: #e6f1fd;
+  --danger: #f36c60;
+  --text-primary: #303133;
+  --text-regular: #606266;
+  --text-secondary: #909399;
+  --text-placeholder: #c0c4cc;
+  --xs: (max-width: 767px);
+  --sm: (min-width: 768px);
+  --md: (min-width: 992px);
+  --lg: (min-width: 1200px);
+  --size-base: 14px;
+  --space-base: 10px;
+  --font-family-sans-serif: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", Tahoma, Arial, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --animation-duration: 0.3s;
+}
+
+/* Reset */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+div,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+button,
+optgroup,
+textarea,
+p,
+pre {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 100%;
+}
+
+dt {
+  font-weight: 700;
+}
+
+small {
+  font-size: 80%;
+}
+
+pre,
+code,
+kbd {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+}
+
+pre {
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+option,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+[hidden],
+template {
+  display: none !important;
+}
+
+/* Reboot */
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  line-height: 1.42857143;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", Tahoma, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #303133;
+  text-align: left;
+  background-color: #fff;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 13px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 7px;
+}
+
+hr {
+  height: 1px;
+  margin: 7px 0;
+  border: 0;
+  background-color: #dcdfe6;
+  clear: both;
+}
+
+a {
+  color: #0077e6;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a:hover, a:focus {
+  color: #3392eb;
+  outline: 0;
+}
+
+a:active {
+  color: #006bcf;
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: inherit;
+}
