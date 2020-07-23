@@ -44,7 +44,7 @@ h4,
 h5,
 h6 {
   font-size: 100%;
-  font-weight: $font-weight-base;
+  font-weight: normal;
 }
 
 p {
@@ -53,18 +53,19 @@ p {
 }
 
 dt {
-  font-weight: $font-weight-bold;
+  font-weight: bolder;
 }
 
 small {
   font-size: 80%;
 }
 
-pre,
 code,
-kbd {
-  font-family: $font-family-monospace;
-  font-size: $font-size-base;
+kbd,
+samp,
+pre {
+  font-family: monospace, monospace;
+  font-size: 100%;
 }
 
 pre {
@@ -80,6 +81,18 @@ img {
 
 svg:not(:root) {
   overflow: hidden;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+progress {
+  vertical-align: baseline;
 }
 
 button,
@@ -98,6 +111,10 @@ textarea {
 button,
 select {
   text-transform: none;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 textarea {

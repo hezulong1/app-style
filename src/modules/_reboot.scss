@@ -8,14 +8,13 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+// TO-BE-ADDED:
+// font-family, color, background-color
 body {
   line-height: 1.42857143;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
-  color: $color-text-primary;
+  font-size: $font-size;
+  font-weight: normal;
   text-align: left;
-  background-color: $color-white;
 }
 
 article,
@@ -33,31 +32,35 @@ section {
 }
 
 [tabindex="-1"]:focus {
-  outline: 0 !important;
+  outline: 0;
 }
 
 h1 {
-  font-size: #{$font-size-base + 6px};
+  font-size: $font-size * 2;
 }
 
 h2 {
-  font-size: #{$font-size-base + 4px};
+  font-size: $font-size * 2 - 4;
 }
 
 h3 {
-  font-size: #{$font-size-base + 2px};
+  font-size: $font-size + 4;
 }
 
 h4 {
-  font-size: $font-size-base;
+  font-size: $font-size;
 }
 
 h5 {
-  font-size: #{$font-size-base - 1px};
+  @if ($lang == 'zh') {
+    font-size: 13px;
+  } @else if ($lang == 'en') {
+    font-size: 14px;
+  }
 }
 
 h6 {
-  font-size: #{$font-size-base - 2px};
+  font-size: 12px;
 }
 
 h1,
@@ -67,32 +70,37 @@ h4,
 h5,
 h6,
 p {
-  margin-bottom: #{$size-base / 2};
+  margin-bottom: $font-size / 2;
 }
 
 hr {
   height: 1px;
-  margin: #{$size-base / 2} 0;
+  margin: $font-size / 2 0;
   border: 0;
-  background-color: $border-color-base;
+  background-color: if($border-color, $border-color, #000);
   clear: both;
 }
 
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+// TO-BE-ADDED: color
 a {
-  color: $link-color;
   text-decoration: none;
   background-color: transparent;
-  cursor: pointer;
-
-  @include hover-focus {
-    color: $link-hover-color;
-    outline: 0;
-  }
-
-  &:active {
-    color: mix($color-black, $color-primary, 10%);
-    outline: 0;
-  }
 }
 
 img {

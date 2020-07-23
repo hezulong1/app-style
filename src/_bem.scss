@@ -1,10 +1,15 @@
-// var
-$namespace: "app" !global;
+/* ============================================
+ * bem 规范，参考 element-ui
+ * ============================================
+ */
+
+// Variable
+$namespace: "app";
 $element-separator: "__";
 $modifier-separator: "--";
 $state-prefix: "is-";
 
-// func
+// Function
 @function selectorToString($selector) {
   $selector: inspect($selector);
   $selector: str-slice($selector, 2, -2);
@@ -42,11 +47,10 @@ $state-prefix: "is-";
 }
 
 @function hitAllSpecialNestRule($selector) {
-  @return containsModifier($selector) or containWhenFlag($selector) or
-    containPseudoClass($selector);
+  @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector);
 }
 
-// mix
+// Mixin
 @mixin b($block) {
 
   @if $namespace == "" {

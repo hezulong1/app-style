@@ -1,0 +1,57 @@
+@include anim(rotate) {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@include anim(zoomin) {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@include anim(zoomout) {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+.u\:anim {
+  animation-duration: $duration;
+  animation-fill-mode: both;
+
+  &\:loop {
+    animation-iteration-count: infinite;
+  }
+
+  &\:zoomin {
+    animation-name: anim-zoomin;
+    transform-origin: center top;
+  }
+
+  &\:zoomout {
+    animation-name: anim-zoomout;
+    transform-origin: center top;
+  }
+
+  &\:loading {
+    animation-name: anim-rotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
+    @extend .u\:anim\:loop;
+  }
+}

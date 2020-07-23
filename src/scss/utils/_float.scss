@@ -1,9 +1,0 @@
-@each $prop in (left, right, none) {
-  @include b(float-#{$prop}) {
-    float: $prop !important;
-  }
-}
-
-@include b(clearfix) {
-  @include clearfix;
-}

@@ -1,24 +1,20 @@
 {
   "name": "@guanwei/app-style",
-  "version": "1.0.0-alpha",
-  "description": "Reset styles for application",
-  "author": "gwzh",
+  "version": "2.0.0",
+  "description": "Reset style for application",
+  "author": "hezulong1<https://github.com/hezulong1>",
   "keywords": [
     "css",
     "sass",
     "scss",
-    "front-end",
-    "app-style",
-    "gwzh",
-    "guanwei"
+    "style"
   ],
   "scripts": {
-    "dev": "cross-env NODE_ENV=development gulp css_compile --gulpfile build/gulpfile.js",
-    "pro": "cross-env NODE_ENV=production gulp css_compile --gulpfile build/gulpfile.js",
-    "watch": "cross-env NODE_ENV=development gulp css_watch --gulpfile build/gulpfile.js"
+    "build": "gulp build --gulpfile gulpfile.js",
+    "prepublish": "npm run build"
   },
-  "style": "css/app.css",
-  "sass": "src/scss/app.scss",
+  "style": "css/reboot.css",
+  "sass": "src/reboot.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hezulong1/app-style.git"
@@ -27,21 +23,17 @@
     "url": "https://github.com/hezulong1/app-style/issues"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-header": "^2.0.5",
-    "gulp-if": "^2.0.2",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-watch": "^5.0.1"
+    "gulp-sass": "^4.1.0",
+    "sass": "^1.26.10"
   },
   "homepage": "https://github.com/hezulong1/app-style#readme",
-  "main": "css/app.min.css",
+  "main": "css/reboot.css",
   "directories": {
     "doc": "doc"
   },
-  "dependencies": {},
   "license": "MIT"
 }

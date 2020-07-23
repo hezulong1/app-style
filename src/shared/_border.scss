@@ -1,0 +1,47 @@
+@each $prop, $shortcut in (border: b) {
+  @if ($enable-border) {
+    .u\:#{$shortcut} {
+      #{$prop}: 1px solid $border-color !important;
+    }
+
+    .u\:#{$shortcut}t,
+    .u\:#{$shortcut}y {
+      #{$prop}-top: 1px solid $border-color !important;
+    }
+
+    .u\:#{$shortcut}r,
+    .u\:#{$shortcut}x {
+      #{$prop}-right: 1px solid $border-color !important;
+    }
+
+    .u\:#{$shortcut}b,
+    .u\:#{$shortcut}y {
+      #{$prop}-bottom: 1px solid $border-color !important;
+    }
+
+    .u\:#{$shortcut}l,
+    .u\:#{$shortcut}x {
+      #{$prop}-left: 1px solid $border-color !important;
+    }
+  }
+  
+  .u\:#{$shortcut}\:no {
+    #{$prop}: 0 !important;
+  }
+
+  .u\:#{$shortcut}t\:no {
+    #{$prop}-top: 0 !important;
+  }
+
+  .u\:#{$shortcut}r\:no {
+    #{$prop}-right: 0 !important;
+  }
+
+  .u\:#{$shortcut}b\:no {
+    #{$prop}-bottom: 0 !important;
+  }
+
+  .u\:#{$shortcut}l\:no {
+    #{$prop}-left: 0 !important;
+  }
+}

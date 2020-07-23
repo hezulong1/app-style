@@ -1,8 +1,10 @@
+@import "var";
+
 @function concatNamespace($name: false) {
   $return: "";
 
   @if $name {
-    @if $namespace=="" {
+    @if $namespace == "" {
       $return: $name;
     }
 

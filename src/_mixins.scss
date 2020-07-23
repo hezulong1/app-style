@@ -1,0 +1,58 @@
+@mixin clearfix {
+  $selector: &;
+
+  @at-root {
+    #{$selector}:before,
+    #{$selector}:after {
+      content: "\20";
+      display: table;
+    }
+
+    #{$selector}:after {
+      clear: both;
+    }
+  }
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin unselect {
+  user-select: none;
+}
+
+@mixin anim($name: false) {
+  @if $name {
+    @at-root {
+      @keyframes anim-#{$name} {
+        @content;
+      }
+    }
+  }
+}
+
+// TODO: 暂时移除
+// @mixin respond($key, $map: $grid-breakpoints) {
+//   @if map-has-key($map, $key) {
+//     @media screen {
+//       @media #{inspect(map-get($map, $key))} {
+//         @content;
+//       }
+//     }
+//   }
+
+//   @else {
+//     @warn "Undefined points: `#{$map}`";
+//   }
+// }
