@@ -1,0 +1,32 @@
+@mixin clearfix {
+  $selector: &;
+
+  @at-root {
+    zoom: 1;
+
+    #{$selector}:before,
+    #{$selector}:after {
+      content: "";
+      display: table;
+    }
+
+    #{$selector}:after {
+      clear: both;
+    }
+  }
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+@mixin text-elip {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

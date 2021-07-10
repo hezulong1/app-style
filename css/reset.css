@@ -1,6 +1,6 @@
 /*!
- * @guanwei/app-style v2.0.0
- * (c) 2018-2020 hezulong1<https://github.com/hezulong1>
+ * @guanwei/app-style v3.0.0
+ * (c) 2018-2021 hezulong1<https://github.com/hezulong1>
  * MIT License
  */
 *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}body,button,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,input,li,ol,optgroup,p,pre,textarea,ul{margin:0;padding:0;-webkit-tap-highlight-color:transparent}li,ol,ul{list-style:none}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}p{line-height:1.8;font-size:100%}dt{font-weight:bolder}small{font-size:80%}code,kbd,pre,samp{font-family:monospace,monospace;font-size:100%}pre{overflow:auto;-ms-overflow-style:scrollbar}img{display:inline-block;vertical-align:middle;border-style:none}svg:not(:root){overflow:hidden}details{display:block}summary{display:list-item}progress{vertical-align:baseline}button,input,optgroup,option,select,textarea{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;outline:0}button,select{text-transform:none}[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}[hidden],template{display:none!important}

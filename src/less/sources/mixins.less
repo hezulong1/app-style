@@ -1,0 +1,28 @@
+.clearfix() {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size) {
+  .size(@size; @size);
+}
+
+.text-elip() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

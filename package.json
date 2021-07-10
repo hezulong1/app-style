@@ -1,20 +1,28 @@
 {
   "name": "@guanwei/app-style",
-  "version": "2.0.0",
-  "description": "Reset style for application",
+  "version": "3.0.0",
+  "description": "reset the browser's basic style",
   "author": "hezulong1<https://github.com/hezulong1>",
   "keywords": [
     "css",
     "sass",
     "scss",
+    "less",
     "style"
   ],
   "scripts": {
-    "build": "gulp build --gulpfile gulpfile.js",
-    "prepublish": "npm run build"
+    "build": "npm run build:less",
+    "build:less": "gulp less",
+    "build:scss": "gulp scss --gulpfile gulpfile.js",
+    "prepublish": "rimraf css && npm run build"
   },
+  "files": [
+    "css",
+    "src"
+  ],
   "style": "css/reboot.css",
-  "sass": "src/reboot.scss",
+  "sass": "src/scss/reboot.scss",
+  "less": "src/less/reboot.less",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hezulong1/app-style.git"
@@ -23,12 +31,14 @@
     "url": "https://github.com/hezulong1/app-style/issues"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.4",
-    "gulp-header": "^2.0.5",
-    "gulp-sass": "^4.1.0",
-    "sass": "^1.26.10"
+    "gulp-clean-css": "^3.10.0",
+    "gulp-header": "^2.0.9",
+    "gulp-less": "^5.0.0",
+    "gulp-sass": "^5.0.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.35.2"
   },
   "homepage": "https://github.com/hezulong1/app-style#readme",
   "main": "css/reboot.css",

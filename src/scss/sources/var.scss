@@ -1,0 +1,5 @@
+$App--lang: en !default;
+$App--ischinese: $App--lang == zh !default;
+// 字体：https://www.cnblogs.com/blackcat/p/13298506.html#%E5%AD%97%E4%BD%93
+$App--font-size: if($App--ischinese, 14px, 16px) !default;
+$App--border-color: #000 !default;

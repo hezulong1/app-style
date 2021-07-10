@@ -1,6 +1,0 @@
-/*!
- * @guanwei/app-style v2.0.0
- * (c) 2018-2020 hezulong1<https://github.com/hezulong1>
- * MIT License
- */
-@media print{*,:after,:before{text-shadow:none!important;-webkit-box-shadow:none!important;box-shadow:none!important}a:not(.btn){text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}pre{white-space:pre-wrap!important}blockquote,pre{border:1px solid #000;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}@page{size:a4}body{min-width:1200px!important}table td,table th{background-color:#fff!important}}

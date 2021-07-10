@@ -1,0 +1,5 @@
+@App--lang: en;
+@App--ischinese: boolean(@App--lang = zh);
+// 字体：https://www.cnblogs.com/blackcat/p/13298506.html#%E5%AD%97%E4%BD%93
+@App--font-size: if(@App--ischinese, 14px, 16px);
+@App--border-color: #000;
