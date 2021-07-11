@@ -10,7 +10,7 @@
 
 废话不多说，下面进入正题：
 
-从**2.0**开始，将采用**半糖原则**，灵感来源[LuLu](https://www.zhangxinxu.com/sp/lulu/mockup/content/about/design.php)，即样式只提供*需要的*，*常用的*，发布包均是*压缩包*，默认导出的是`reboot.css`包，其他包需要自己书写对应链接。
+从**2.0**开始，将采用**半糖原则**，灵感来源[LuLu](https://www.zhangxinxu.com/sp/lulu/mockup/content/about/design.php)，即样式只提供*需要的*，*常用的*，发布包均是*压缩包*，默认导出的是`reboot-zh.css`包，其他包需要自己书写对应链接。
 
 - **`reset.css`**: 格式化样式，全局归零，功能与`minireset.css`类似
 - **`reboot.css`**: 包含`reset.css`，重新配置了样式，使浏览器表现尽可能一致，功能与`normalize.css`类似
@@ -33,6 +33,8 @@ npm i @guanwei/app-style
 ## 使用
 
 如果直接使用`css`那么无需关心，直接引入即可
+
+> Note：默认采用中文，即`reboot-zh.css`，其他包请引入相对应路径
 
 ### 定制化
 
