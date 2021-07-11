@@ -1,6 +1,6 @@
 {
   "name": "@guanwei/app-style",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "reset the browser's basic style",
   "author": "hezulong1<https://github.com/hezulong1>",
   "keywords": [
@@ -20,9 +20,10 @@
     "css",
     "src"
   ],
-  "style": "css/reboot.css",
-  "sass": "src/scss/reboot.scss",
-  "less": "src/less/reboot.less",
+  "main": "css/reboot-zh.css",
+  "style": "css/reboot-zh.css",
+  "sass": "src/scss/reboot-zh.scss",
+  "less": "src/less/reboot-zh.less",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hezulong1/app-style.git"
@@ -41,7 +42,6 @@
     "sass": "^1.35.2"
   },
   "homepage": "https://github.com/hezulong1/app-style#readme",
-  "main": "css/reboot.css",
   "directories": {
     "doc": "doc"
   },
