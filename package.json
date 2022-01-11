@@ -8,7 +8,9 @@
     "sass",
     "scss",
     "less",
-    "style"
+    "style",
+    "gwzh",
+    "guanwei"
   ],
   "scripts": {
     "build": "npm run build:less && npm run build-modern:less",
@@ -63,5 +65,8 @@
     "doc": "doc"
   },
   "license": "MIT",
-  "dependencies": {}
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
 }
