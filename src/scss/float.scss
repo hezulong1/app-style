@@ -1,0 +1,44 @@
+@use "sass:math";
+
+@import "sources/var.scss";
+@import "sources/mixins.scss";
+
+// Mixin
+@mixin make-grid($prefix: false) {
+  @for $i from 1 through $App--grid-columns {
+    $value: math.div($i, $App--grid-columns) * 100%;
+
+    #{ if($prefix, '.#{$prefix}\\:col-#{$i}', '.col-#{$i}') } {
+      float: left;
+      width: $value;
+    }
+
+    #{ if($prefix, '.#{$prefix}\\:col-offset-#{$i}', '.col-offset-#{$i}') } {
+      margin-left: $value;
+    }
+  }
+}
+
+// Content
+.row {
+  display: block;
+  @include clearfix;
+}
+
+%global-column {
+  display: block;
+}
+
+@include make-grid();
+
+@each $screen, $media in $App--grid-breakpoints {
+  @for $i from 1 through $App--grid-columns {
+    .#{$screen}\:col-#{$i} {
+      @extend %global-column;
+    }
+  }
+
+  @media #{inspect($media)} {
+    @include make-grid($screen);
+  }
+}

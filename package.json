@@ -1,6 +1,6 @@
 {
   "name": "@guanwei/app-style",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "reset the browser's basic style",
   "author": "hezulong1<https://github.com/hezulong1>",
   "keywords": [
@@ -11,7 +11,9 @@
     "style"
   ],
   "scripts": {
-    "build": "npm run build:less",
+    "build": "npm run build:less && npm run build-modern:less",
+    "build-modern:less": "npm run build:less -- --modern",
+    "build-modern:scss": "npm run build:scss -- --modern",
     "build:less": "gulp less",
     "build:scss": "gulp scss --gulpfile gulpfile.js",
     "prepublish": "rimraf css && npm run build"
@@ -21,9 +23,23 @@
     "src"
   ],
   "main": "css/reboot-zh.css",
-  "style": "css/reboot-zh.css",
-  "sass": "src/scss/reboot-zh.scss",
-  "less": "src/less/reboot-zh.less",
+  "exports": {
+    ".": "./css/reboot-zh.css",
+    "./en": "./css/reboot.css",
+    "./reset": "./css/reset.css",
+    "./float": "./css/float.css",
+    "./flex": "./css/flex.css",
+    "./less": "./src/less/reboot-zh.less",
+    "./less/en": "./src/less/reboot.less",
+    "./less/reset": "./src/less/reset.less",
+    "./less/float": "./src/less/float.less",
+    "./less/flex": "./src/less/flex.less",
+    "./scss": "./src/scss/reboot-zh.scss",
+    "./scss/en": "./src/scss/reboot.scss",
+    "./scss/reset": "./src/scss/reset.scss",
+    "./scss/float": "./src/scss/float.scss",
+    "./scss/flex": "./src/scss/flex.scss"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hezulong1/app-style.git"
@@ -38,6 +54,7 @@
     "gulp-header": "^2.0.9",
     "gulp-less": "^5.0.0",
     "gulp-sass": "^5.0.0",
+    "minimist": "^1.2.5",
     "rimraf": "^3.0.2",
     "sass": "^1.35.2"
   },
@@ -45,5 +62,6 @@
   "directories": {
     "doc": "doc"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }

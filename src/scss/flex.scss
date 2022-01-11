@@ -1,0 +1,84 @@
+@use "sass:math";
+
+@import "sources/var.scss";
+
+// Mixin
+@mixin make-grid($prefix: false) {
+  @for $i from 1 through $App--grid-columns {
+    $value: math.div($i, $App--grid-columns) * 100%;
+
+    #{ if($prefix, '.#{$prefix}\\:col-#{$i}', '.col-#{$i}') } {
+      max-width: $value;
+      flex: 0 0 $value;
+    }
+
+    #{ if($prefix, '.#{$prefix}\\:col-offset-#{$i}', '.col-offset-#{$i}') } {
+      margin-left: $value;
+    }
+  }
+}
+
+// Content
+.row {
+  display: flex;
+  flex-flow: row wrap;
+
+  &:before,
+  &:after {
+    display: flex;
+  }
+
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &-justify-start {
+    justify-content: flex-start;
+  }
+
+  &-justify-center {
+    justify-content: center;
+  }
+
+  &-justify-end {
+    justify-content: flex-end;
+  }
+
+  &-justify-space-between {
+    justify-content: space-between;
+  }
+
+  &-justify-space-around {
+    justify-content: space-around;
+  }
+
+  &-align-top {
+    align-items: flex-start;
+  }
+
+  &-align-middle {
+    align-items: center;
+  }
+
+  &-align-bottom {
+    align-items: flex-end;
+  }
+
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.col {
+  max-width: 100%;
+  flex: 1;
+}
+
+@include make-grid();
+
+@each $screen, $media in $App--grid-breakpoints {
+  @media #{inspect($media)} {
+    @include make-grid($screen);
+  }
+}

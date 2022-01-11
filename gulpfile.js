@@ -5,6 +5,7 @@ const header = require('gulp-header')
 const autoprefixer = require('gulp-autoprefixer')
 const cleanCss = require('gulp-clean-css')
 const { version, author, name, license } = require('./package.json')
+const argv = require('minimist')(process.argv.slice(2), { string: [ '_' ] })
 
 const banner = `/*!
  * ${name} v${version}
@@ -12,15 +13,16 @@ const banner = `/*!
  * ${license} License
  */
 `
-const resources = 'reset,reboot,reboot-zh'.split(',')
+const resources = (argv.modern ? 'flex' : 'reset,reboot,reboot-zh,float').split(',')
+const browsers = argv.modern ? ['defaults'] : ['> 1%', 'last 3 versions']
 
 const globalPipe = stream => stream
   .pipe(autoprefixer({
-    browsers: ['> 1%', 'last 3 versions'],
+    browsers,
     cascade: false,
     remove: true
   }))
-  .pipe(cleanCss({compatibility: 'ie9'}))
+  .pipe(cleanCss(argv.modern ? {} : { compatibility: 'ie9' }))
   .pipe(header(banner))
   .pipe(gulp.dest('./css'))
 

@@ -1,0 +1,58 @@
+@import "sources/var.less";
+@import "sources/mixins.less";
+
+// Mixins
+.make-grid-columns() {
+  .col(@index) {
+    @item: ~'.col-@{index}, .xs\:col-@{index}, .sm\:col-@{index}, .md\:col-@{index}, .lg\:col-@{index}, .xl\:col-@{index}, .xxl\:col-@{index}';
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @App--grid-columns) {
+    @item: ~'.col-@{index}, .xs\:col-@{index}, .sm\:col-@{index}, .md\:col-@{index}, .lg\:col-@{index}, .xl\:col-@{index}, .xxl\:col-@{index}';
+    .col((@index + 1), ~'@{list}, @{item}');
+  }
+  .col(@index, @list) when (@index > @App--grid-columns) {
+    @{list} {
+      display: block;
+    }
+  }
+  .col(1);
+}
+
+.loop-grid-columns(@index, @prefix) when (@index <= @App--grid-columns) {
+  @unprefix: boolean(@prefix = e(''));
+  @column: if(@unprefix, ~'col-@{index}', ~'@{prefix}\:col-@{index}');
+  @column-offset: if(@unprefix, ~'col-offset-@{index}', ~'@{prefix}\:col-offset-@{index}');
+
+  @value: percentage((@index / @App--grid-columns));
+
+  .@{column} {
+    float: left;
+    width: @value;
+  }
+
+  .@{column-offset} {
+    margin-left: @value;
+  }
+
+  .loop-grid-columns((@index + 1), @prefix);
+}
+
+.make-grid(@breakpoint: ~'') {
+  .loop-grid-columns(1, @breakpoint);
+}
+
+// Content
+.row {
+  display: block;
+  .clearfix;
+}
+
+.make-grid-columns();
+.make-grid();
+
+each(@App--grid-breakpoints, {
+  @media @value {
+    .make-grid(@key);
+  }
+})

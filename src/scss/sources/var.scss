@@ -3,3 +3,23 @@ $App--ischinese: $App--lang == zh !default;
 // 字体：https://www.cnblogs.com/blackcat/p/13298506.html#%E5%AD%97%E4%BD%93
 $App--font-size: if($App--ischinese, 14px, 16px) !default;
 $App--border-color: #000 !default;
+
+// Screen
+// https://windicss.org/utilities/general/variants.html
+$App--screen-xxl: 1536px;
+$App--screen-xl: 1280px;
+$App--screen-lg: 1024px;
+$App--screen-md: 768px;
+$App--screen-sm: 640px;
+$App--screen-xs: $App--screen-sm - 0.0001;
+
+// Grid
+$App--grid-columns: 24;
+$App--grid-breakpoints: (
+  xs: (max-width: $App--screen-xs),
+  sm: (min-width: $App--screen-sm),
+  md: (min-width: $App--screen-md),
+  lg: (min-width: $App--screen-lg),
+  xl: (min-width: $App--screen-xl),
+  xxl: (min-width: $App--screen-xxl)
+)
